@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootAnchorPane" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.MainAnchorPaneController">
+    <children>
+        <fx:include fx:id="leftAnchorPane" source="leftAnchorPane.fxml" />
+        <fx:include fx:id="rightAnchorPane" layoutX="400.0" source="rightAnchorPane.fxml" />
+    </children>
+</AnchorPane>

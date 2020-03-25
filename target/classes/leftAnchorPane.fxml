@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.text.Text?>
+<AnchorPane fx:id="rightAnchorPane" maxHeight="600.0" maxWidth="400.0" minHeight="600.0" minWidth="400.0" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.ChildAnchorPaneController">
+    <children>
+        <ListView fx:id="ExplorerList" layoutX="46.0" layoutY="171.0" onMouseClicked="#choosingDirectoryFromList" prefHeight="418.0" prefWidth="308.0" />
+        <TextField fx:id="PathTextField" layoutX="46.0" layoutY="38.0" onKeyTyped="#ifEnterKeyIsTyped" prefHeight="25.0" prefWidth="308.0" />
+        <ComboBox fx:id="DriveComboBox" layoutX="281.0" layoutY="86.0" onAction="#choosingDriveFromComboBox" onShowing="#reloadDiskList" prefHeight="25.0" prefWidth="73.0" />
+        <Button fx:id="goingUpButton" layoutX="46.0" layoutY="83.0" mnemonicParsing="false" onAction="#goingUp" text="&lt;-">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="deleteSelectedFileButton" layoutX="91.0" layoutY="83.0" mnemonicParsing="false" onAction="#deleteSelectedFile" prefHeight="30.0" prefWidth="52.0" text="Delete" />
+        <Button fx:id="copySelectedFileButton" layoutX="217.0" layoutY="83.0" mnemonicParsing="false" onAction="#copySelectedFile" prefHeight="30.0" prefWidth="52.0" text="Copy" />
+        <Button fx:id="moveSelectedFileButton" layoutX="154.0" layoutY="83.0" mnemonicParsing="false" onAction="#moveSelectedFile" prefHeight="30.0" prefWidth="52.0" text="Move" />
+        <ToolBar layoutY="123.0" prefHeight="35.0" prefWidth="400.0" AnchorPane.topAnchor="123.0">
+            <items>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Disk size" wrappingWidth="46.3828125" />
+                <TextField fx:id="diskSizeTextArea" editable="false" prefHeight="25.0" prefWidth="67.0" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Free size:" textAlignment="CENTER" wrappingWidth="54.568359375" />
+                <TextField fx:id="freeSpaceTextArea" editable="false" prefHeight="25.0" prefWidth="67.0" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Used space:" textAlignment="CENTER" wrappingWidth="62.677734375" />
+                <TextField fx:id="usedSpaceTextArea" editable="false" prefHeight="25.0" prefWidth="67.0" />
+            </items>
+        </ToolBar>
+    </children>
+</AnchorPane>
